@@ -104,20 +104,6 @@ const About = () => {
                 </div>
                 <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <img 
-                    src={founder1} 
-                    alt="Fundadora da The Sisters Vision" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img 
-                    src={founder2} 
-                    alt="Co-fundadora da The Sisters Vision" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img 
                     src={sistersTogether2} 
                     alt="As fundadoras unidas pela visão" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
