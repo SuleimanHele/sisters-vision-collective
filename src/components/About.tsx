@@ -1,4 +1,8 @@
 import { Target, Heart, TrendingUp, Users } from "lucide-react";
+import sistersTogether1 from "@/assets/sisters-together-1.jpg";
+import sistersTogether2 from "@/assets/sisters-together-2.jpg";
+import founder1 from "@/assets/founder-1.jpg";
+import founder2 from "@/assets/founder-2.jpg";
 
 const About = () => {
   return (
@@ -56,32 +60,71 @@ const About = () => {
           </div>
         </div>
 
-        {/* Story Section */}
-        <div className="max-w-4xl mx-auto bg-card rounded-2xl p-10 shadow-lg border border-border">
-          <div className="flex items-center gap-4 mb-6">
-            <Users className="w-10 h-10 text-primary" />
-            <h3 className="text-3xl font-bold text-foreground">Nossa História</h3>
-          </div>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              A nossa trajetória iniciou-se em <strong className="text-foreground">2017</strong>, com um projeto pioneiro: 
-              a instalação de uma cozinha inclusiva, especializada em produtos destinados a públicos gluten free, 
-              veganos e lactose free.
-            </p>
-            <p>
-              Em <strong className="text-foreground">2018</strong>, demos um passo importante com a abertura da primeira 
-              loja de levantamento de produtos e take-away, e em <strong className="text-foreground">2020</strong> lançámos 
-              o primeiro café 100% gluten free de Angola.
-            </p>
-            <p>
-              Durante a pandemia, demonstrámos resiliência e capacidade de adaptação, ao migrar para o formato online, 
-              assegurando continuidade e proximidade com os nossos clientes.
-            </p>
-            <p>
-              Em <strong className="text-foreground">2025</strong>, realizámos uma restruturação e expansão integral, 
-              inaugurando um novo espaço de referência com duas cozinhas especializadas, valorizando a diversidade e 
-              autenticidade cultural.
-            </p>
+        {/* Story Section with Photos */}
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-card rounded-2xl p-10 shadow-lg border border-border">
+            <div className="flex items-center gap-4 mb-6">
+              <Users className="w-10 h-10 text-primary" />
+              <h3 className="text-3xl font-bold text-foreground">Nossa História</h3>
+            </div>
+            
+            {/* Story Content with Image Grid */}
+            <div className="grid lg:grid-cols-2 gap-8 items-start">
+              {/* Text Content */}
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  A nossa trajetória iniciou-se em <strong className="text-foreground">2017</strong>, com um projeto pioneiro: 
+                  a instalação de uma cozinha inclusiva, especializada em produtos destinados a públicos gluten free, 
+                  veganos e lactose free.
+                </p>
+                <p>
+                  Em <strong className="text-foreground">2018</strong>, demos um passo importante com a abertura da primeira 
+                  loja de levantamento de produtos e take-away, e em <strong className="text-foreground">2020</strong> lançámos 
+                  o primeiro café 100% gluten free de Angola.
+                </p>
+                <p>
+                  Durante a pandemia, demonstrámos resiliência e capacidade de adaptação, ao migrar para o formato online, 
+                  assegurando continuidade e proximidade com os nossos clientes.
+                </p>
+                <p>
+                  Em <strong className="text-foreground">2025</strong>, realizámos uma restruturação e expansão integral, 
+                  inaugurando um novo espaço de referência com duas cozinhas especializadas, valorizando a diversidade e 
+                  autenticidade cultural.
+                </p>
+              </div>
+
+              {/* Image Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={sistersTogether1} 
+                    alt="As irmãs fundadoras da The Sisters Vision" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={founder1} 
+                    alt="Fundadora da The Sisters Vision" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={founder2} 
+                    alt="Co-fundadora da The Sisters Vision" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <img 
+                    src={sistersTogether2} 
+                    alt="As fundadoras unidas pela visão" 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
