@@ -1,6 +1,5 @@
 import { Award, Briefcase, GraduationCap } from "lucide-react";
 import founder3 from "@/assets/founder-3.jpg";
-import founder4 from "@/assets/founder-4.jpg";
 
 const Founder = () => {
   return (
@@ -19,20 +18,13 @@ const Founder = () => {
           <div className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border">
             <div className="p-10">
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                {/* Photos */}
-                <div className="flex flex-col gap-4 md:w-64">
+                {/* Photo */}
+                <div className="md:w-64">
                   <div className="rounded-xl overflow-hidden shadow-lg">
                     <img 
                       src={founder3} 
                       alt="Laeticia Makunga, Fundadora da The Sisters Vision" 
-                      className="w-full h-64 object-cover"
-                    />
-                  </div>
-                  <div className="rounded-xl overflow-hidden shadow-lg">
-                    <img 
-                      src={founder4} 
-                      alt="Laeticia Makunga, CEO" 
-                      className="w-full h-64 object-cover"
+                      className="w-full h-80 object-cover"
                     />
                   </div>
                 </div>
