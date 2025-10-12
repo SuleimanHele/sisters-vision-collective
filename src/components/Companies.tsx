@@ -131,22 +131,22 @@ const Companies = () => {
             Nossas Empresas
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Cada empresa sob a The Sisters Vision representa um compromisso com a excelência, 
+            Cada empresa sob a The Sisters Vision representa um compromisso com a excelência,
             inovação e impacto positivo na comunidade.
           </p>
         </div>
 
         <div className="space-y-20">
           {companies.map((company, index) => (
-            <div 
+            <div
               key={company.id}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10 items-center`}
             >
               {/* Image */}
               <div className="w-full lg:w-1/2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-                  <img 
-                    src={company.image} 
+                  <img
+                    src={company.image}
                     alt={company.name}
                     className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
                   />
@@ -167,7 +167,7 @@ const Companies = () => {
                     {company.tagline}
                   </p>
                 </div>
-                
+
                 <p className="text-muted-foreground leading-relaxed text-lg">
                   {company.description}
                 </p>
@@ -179,7 +179,7 @@ const Companies = () => {
                   </p>
                 </div>
 
-                <Button 
+                <Button
                   className="group bg-primary hover:bg-primary/90 text-primary-foreground"
                   size="lg"
                   onClick={() => handleLearnMore(company)}
@@ -281,11 +281,27 @@ const Companies = () => {
                   </ModalSection>
 
                   {/* CTA Button */}
+                  {/* CTA Button */}
                   <div className="mt-8 pt-6 border-t border-gray-200">
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-white py-3 text-lg">
-                      Entrar em Contacto
+                    <Button
+                      asChild
+                      className="w-full bg-primary hover:bg-primary/90 text-white py-3 text-lg"
+                    >
+                      <a
+                        href={`mailto:${selectedCompany.id === "organik"
+                            ? "organik@thesistervision.com"
+                            : selectedCompany.id === "the-good-cafe"
+                              ? "thegoodcafe@thesistervision.com"
+                              : "culturascatering@thesistervision.com"
+                          }?subject=Contato%20-%20${encodeURIComponent(selectedCompany.name)}&body=Olá,%20gostaria%20de%20entrar%20em%20contacto%20sobre...`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Entrar em Contacto
+                      </a>
                     </Button>
                   </div>
+
                 </div>
               </div>
             </div>
