@@ -1,5 +1,5 @@
 import { Award, Briefcase, GraduationCap } from "lucide-react";
-import founder3 from "@/assets/founder-3.jpg";
+import founder3 from "@/assets/founder-2.jpg";
 
 const Founder = () => {
   return (
