@@ -1,5 +1,4 @@
 import { Target, Heart, TrendingUp, Users } from "lucide-react";
-import sistersTogether1 from "@/assets/sisters-together-1.jpg";
 import sistersTogether2 from "@/assets/sisters-together-2.jpg";
 import founder1 from "@/assets/founder-1.jpg";
 import founder2 from "@/assets/founder-2.jpg";
@@ -70,8 +69,8 @@ const About = () => {
             
             {/* Story Content with Image Grid */}
             <div className="grid lg:grid-cols-2 gap-8 items-start">
-              {/* Text Content */}
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              {/* Texto */}
+              <div className="space-y-4 text-muted-foreground leading-relaxed order-2 lg:order-1">
                 <p>
                   A nossa trajetória iniciou-se em <strong className="text-foreground">2017</strong>, com um projeto pioneiro: 
                   a instalação de uma cozinha inclusiva, especializada em produtos destinados a públicos gluten free, 
@@ -93,22 +92,13 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Image Grid */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img 
-                    src={sistersTogether1} 
-                    alt="As irmãs fundadoras da The Sisters Vision" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <img 
-                    src={sistersTogether2} 
-                    alt="As fundadoras unidas pela visão" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+              {/* Imagem ajustada para aparecer inteira */}
+              <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 order-1 lg:order-2 flex justify-center items-center">
+                <img 
+                  src={sistersTogether2} 
+                  alt="As fundadoras unidas pela visão" 
+                  className="w-full h-auto max-h-[500px] object-contain transition-transform duration-300 hover:scale-105"
+                />
               </div>
             </div>
           </div>
