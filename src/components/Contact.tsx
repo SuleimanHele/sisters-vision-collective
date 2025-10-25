@@ -30,6 +30,7 @@ const Contact = () => {
                 <a
                   href="mailto:culturascatering@thesistervision.com"
                   className="flex items-start gap-4 hover:bg-primary/5 rounded-lg p-2 transition"
+                  aria-label="Enviar email para Culturas Catering"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-primary" />
@@ -45,10 +46,11 @@ const Contact = () => {
                 {/* Telefone */}
                 <a
                   href="tel:+244947208008"
-                  className="flex items-start gap-4 hover:bg-secondary/5 rounded-lg p-2 transition"
+                  className="flex items-start gap-4 hover:bg-primary/5 rounded-lg p-2 transition"
+                  aria-label="Ligar para Culturas Catering"
                 >
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-secondary" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
@@ -58,13 +60,14 @@ const Contact = () => {
 
                 {/* Localização */}
                 <a
-                  href="https://maps.google.com/?q=kinaxixi, rua cónego Manuel das Neves, Luanda, Angola"
+                  href={`https://maps.google.com/?q=${encodeURIComponent("kinaxixi, rua cónego Manuel das Neves, Luanda, Angola")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-4 hover:bg-accent/5 rounded-lg p-2 transition"
+                  className="flex items-start gap-4 hover:bg-primary/5 rounded-lg p-2 transition"
+                  aria-label="Ver localização no Google Maps"
                 >
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-accent" />
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">
@@ -80,6 +83,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 hover:bg-primary/5 rounded-lg p-2 transition"
+                  aria-label="Visitar perfil do LinkedIn"
                 >
                   <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Linkedin className="w-5 h-5 text-primary" />
@@ -106,8 +110,7 @@ const Contact = () => {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   onClick={() =>
-                  (window.location.href =
-                    "mailto:culturascatering@thesistervision.com")
+                    (window.location.href = "mailto:culturascatering@thesistervision.com")
                   }
                 >
                   Enviar Mensagem
