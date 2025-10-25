@@ -23,7 +23,7 @@ const Navbar = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
       setIsMobileMenuOpen(false);
     }
@@ -33,7 +33,7 @@ const Navbar = () => {
     { label: "Início", id: "hero" },
     { label: "Quem Somos", id: "about" },
     { label: "Empresas", id: "companies" },
-    { label: "Fundadora", id: "founder" },
+    { label: "Fundadoras", id: "founder" },
     { label: "Contacto", id: "contact" },
   ];
 
@@ -50,7 +50,7 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="text-2xl font-extrabold text-foreground hover:text-primary transition-colors tracking-wide"
           >
             The Sisters Vision
           </button>
@@ -61,7 +61,7 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                className="text-lg text-foreground/90 hover:text-primary font-semibold transition-colors tracking-wide"
               >
                 {link.label}
               </button>
@@ -90,7 +90,7 @@ const Navbar = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 text-muted-foreground hover:text-primary hover:bg-muted/50 rounded-lg transition-colors font-medium"
+                className="block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted/70 rounded-lg transition-colors font-semibold text-lg tracking-wide"
               >
                 {link.label}
               </button>

@@ -44,7 +44,7 @@ const Contact = () => {
 
                 {/* Telefone */}
                 <a
-                  href="tel:+244XXXXXXXXX"
+                  href="tel:+244947208008"
                   className="flex items-start gap-4 hover:bg-secondary/5 rounded-lg p-2 transition"
                 >
                   <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
@@ -52,13 +52,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Telefone</h4>
-                    <p className="text-muted-foreground">+244 XXX XXX XXX</p>
+                    <p className="text-muted-foreground">+244 947 208 008</p>
                   </div>
                 </a>
 
                 {/* Localização */}
                 <a
-                  href="https://maps.google.com/?q=Luanda,+Angola"
+                  href="https://maps.google.com/?q=kinaxixi, rua cónego Manuel das Neves, Luanda, Angola"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 hover:bg-accent/5 rounded-lg p-2 transition"
@@ -70,7 +70,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-1">
                       Localização
                     </h4>
-                    <p className="text-muted-foreground">Luanda, Angola</p>
+                    <p className="text-muted-foreground">kinaxixi, rua cónego Manuel das Neves, Luanda, Angola</p>
                   </div>
                 </a>
 
@@ -106,8 +106,8 @@ const Contact = () => {
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
                   onClick={() =>
-                    (window.location.href =
-                      "mailto:culturascatering@thesistervision.com")
+                  (window.location.href =
+                    "mailto:culturascatering@thesistervision.com")
                   }
                 >
                   Enviar Mensagem
