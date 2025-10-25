@@ -33,7 +33,7 @@ const Navbar = () => {
     { label: "Início", id: "hero" },
     { label: "Quem Somos", id: "about" },
     { label: "Empresas", id: "companies" },
-    { label: "Fundadoras", id: "founder" },
+    { label: "Liderança", id: "founder" }, // Mudei de "Fundadoras" para "Liderança" para ser mais inclusivo
     { label: "Contacto", id: "contact" },
   ];
 
@@ -44,24 +44,28 @@ const Navbar = () => {
           ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"
       }`}
+      role="navigation"
+      aria-label="Navegação principal"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo com acessibilidade */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-2xl font-extrabold text-foreground hover:text-primary transition-colors tracking-wide"
+            className="text-xl sm:text-2xl font-extrabold text-foreground hover:text-primary transition-colors tracking-wide focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded"
+            aria-label="The Sisters Vision - Ir para o início"
           >
             The Sisters Vision
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-lg text-foreground/90 hover:text-primary font-semibold transition-colors tracking-wide"
+                className="text-base lg:text-lg text-foreground/90 hover:text-primary font-semibold transition-colors tracking-wide focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background rounded px-2 py-1"
+                aria-label={`Ir para ${link.label}`}
               >
                 {link.label}
               </button>
@@ -72,25 +76,35 @@ const Navbar = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden w-10 h-10 sm:w-12 sm:h-12"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
             )}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 bg-background/95 backdrop-blur-md border-t border-border">
+          <div 
+            id="mobile-menu"
+            className="md:hidden py-3 space-y-2 bg-background/95 backdrop-blur-md border-t border-border"
+            role="menu"
+            aria-label="Menu mobile"
+          >
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted/70 rounded-lg transition-colors font-semibold text-lg tracking-wide"
+                className="block w-full text-left px-4 py-3 text-foreground hover:text-primary hover:bg-muted/70 rounded-lg transition-colors font-semibold text-base focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+                role="menuitem"
+                aria-label={`Ir para ${link.label}`}
               >
                 {link.label}
               </button>
